@@ -1,6 +1,11 @@
 <h1>Toy Production Order Manager</h1>
 
 <h3>Placed Orders</h3>
+<ul>
+    {{#each orders}}
+    <li>{{order_item}}</li>
+    {{/each}}
+</ul>
 
 <h3>Add An Order</h3>
 

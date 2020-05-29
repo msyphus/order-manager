@@ -26,8 +26,6 @@ var orm = {
         queryString += makePlaceholders(val.length);
         queryString += ")";
 
-        console.log(queryString);
-
         connection.query(queryString, val, function(err, res) {
             if (err) throw err;
             cb(res);

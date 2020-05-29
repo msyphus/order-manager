@@ -15,7 +15,6 @@ router.get("/", function(req, res) {
 router.post("/api/orders", function(req, res) {
     order.addOrder(["order_item", "completed"], [req.body.order_item, req.body.completed], function(result) {
         res.json({id: result.insertId});
-        console.log("controller", result);
     });
 });
 

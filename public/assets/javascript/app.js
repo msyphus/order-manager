@@ -1,10 +1,9 @@
-
 $(function() {
     console.log("ready");
 
-    $(".addOrder").on("submit", function(event) {
+    $("#subForm").on("click", function(event) {
         event.preventDefault();
-        
+
         console.log("clicked");
 
         var newOrder = {

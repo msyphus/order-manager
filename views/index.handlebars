@@ -3,7 +3,10 @@
 <h3>Placed Orders</h3>
 <ul>
     {{#each orders}}
-    <li>{{order_item}}</li>
+    <li>{{order_item}} 
+        {{> partial completed=true}}
+    </li>
+
     {{/each}}
 </ul>
 

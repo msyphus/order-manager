@@ -12,6 +12,7 @@ if (process.env.JAWSDB_URL) {
         password: sqlpass,
         database: "orders_db"
 });
+};
 
 connection.connect(function(err) {
     if (err) throw err;

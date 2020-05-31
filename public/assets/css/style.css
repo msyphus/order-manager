@@ -20,9 +20,13 @@ h3 {
 ul {
     padding: 0;
     list-style-type: none;
+    width: 50%;
+    margin: 10px auto;
 }
 
-li, input {
+.orderItemBar {
+    float: left;
+    width: 60%;
     border: 2px groove #cccccc;
     border-radius: 8px;
     padding: 5px 5px 5px 10px;
@@ -30,37 +34,44 @@ li, input {
 }
 
 .statusChange {
-    position: absolute;
-    right: 0;
-    margin: -7px 1px;
+    float: right;
     padding: 6px 5px;
     border-radius: 8px;
+    width: 100px;
 }
 
 .openOrders {
     position: relative;
     float: left;
-    margin: 0 15% 5%;
-    width: 15%;
+    margin: 0;
+    width: 50%;
 }
 
 .closedOrders {
     position: relative;
     float: right;
-    margin: 0 15% 5%;
-    width: 15%;
+    margin: 0;
+    width: 50%;
 }
 
 .addOrder {
     clear: both;
     display: block;
     width: 40%;
-    margin: 3% auto;
+    margin: auto;
+    padding-top: 5%;
 }
 
 form {
     text-align: center;
     margin-top: 10px;
+}
+
+input {
+    border: 2px groove #cccccc;
+    border-radius: 8px;
+    padding: 5px 5px 5px 10px;
+    background-color: #dddddd;
 }
 
 #subForm {

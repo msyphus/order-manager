@@ -1,28 +1,34 @@
 <h1>Toy Production Order Manager</h1>
 
-<h3>Placed Orders</h3>
-<ul>
-    {{#each orders}}
-        {{#unless completed}}
-         {{> partial status=true}}
-        {{/unless}}
-    {{/each}}
-</ul>
+<div class="openOrders">
+    <h3>Placed Orders</h3>
+    <ul>
+        {{#each orders}}
+            {{#unless completed}}
+            {{> partial status=true}}
+            {{/unless}}
+        {{/each}}
+    </ul>
+</div>
 
-<h3>Completed Orders</h3>
-<ul>
-    {{#each orders}}
-        {{#if completed}}
-            {{> partial status=false}}
-        {{/if}}
-    {{/each}}
-</ul>
+<div class="closedOrders">
+    <h3>Completed Orders</h3>
+    <ul>
+        {{#each orders}}
+            {{#if completed}}
+                {{> partial status=false}}
+            {{/if}}
+        {{/each}}
+    </ul>
+</div>
 
-<h3>Add An Order</h3>
-<form>
-    <label for="orderItem">Item Ordered:</label>
-    <input type="text" id="orderItem">
-    <button type="submit" id="subForm">Add Order</button>
-</form>
+<div class="addOrder">
+    <h3>Add An Order</h3>
+    <form>
+        <label for="orderItem">Item Ordered:</label>
+        <input type="text" id="orderItem">
+        <button type="submit" id="subForm">Add Order</button>
+    </form>
+</div>
 
-
+<footer>Mark Syphus &copy;2020</footer>

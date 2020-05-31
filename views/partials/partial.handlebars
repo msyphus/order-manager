@@ -1,7 +1,11 @@
 <li>
-    {{order_item}} 
+    <span class="orderItemBar">
+        {{order_item}} 
+    </span>
 
-    <button class="statusChange" data-id="{{id}}" data-newstatus="{{status}}">
-        {{#if status}}Close Order{{else}}Reopen Order{{/if}}
-    </button>
+    <span class="statusChangeBtn">
+        <button class="statusChange" data-id="{{id}}" data-newstatus="{{status}}">
+            {{#if status}}Close Order{{else}}Reopen Order{{/if}}
+        </button>
+    </span>
 </li>

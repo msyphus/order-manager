@@ -1,0 +1,76 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-image: linear-gradient(to bottom, #aaaaaa, #dddddd);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 0px;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+li, input {
+    border: 2px groove #cccccc;
+    border-radius: 8px;
+    padding: 5px 5px 5px 10px;
+    background-color: #dddddd;
+}
+
+.statusChange {
+    position: absolute;
+    right: 0;
+    margin: -7px 1px;
+    padding: 6px 5px;
+    border-radius: 8px;
+}
+
+.openOrders {
+    position: relative;
+    float: left;
+    margin: 0 15% 5%;
+    width: 15%;
+}
+
+.closedOrders {
+    position: relative;
+    float: right;
+    margin: 0 15% 5%;
+    width: 15%;
+}
+
+.addOrder {
+    clear: both;
+    display: block;
+    width: 40%;
+    margin: 3% auto;
+}
+
+form {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#subForm {
+    padding: 5px;
+    border-radius: 8px;
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}

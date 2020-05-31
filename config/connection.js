@@ -1,5 +1,5 @@
 var mysql = require("mysql");
-var sqlpass = require("../key");
+// var sqlpass = require("../key");
 var connection;
 
 if (process.env.JAWSDB_URL) {
@@ -9,7 +9,7 @@ if (process.env.JAWSDB_URL) {
         host: "localhost",
         port: 3308,
         user: "root",
-        password: sqlpass,
+        password: "root",
         database: "orders_db"
 });
 };

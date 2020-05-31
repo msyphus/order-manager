@@ -3,10 +3,18 @@
 <h3>Placed Orders</h3>
 <ul>
     {{#each orders}}
-    <li>{{order_item}} 
-        {{> partial completed=true}}
-    </li>
+        {{#unless completed}}
+         {{> partial status=true}}
+        {{/unless}}
+    {{/each}}
+</ul>
 
+<h3>Completed Orders</h3>
+<ul>
+    {{#each orders}}
+        {{#if completed}}
+            {{> partial status=false}}
+        {{/if}}
     {{/each}}
 </ul>
 
@@ -17,4 +25,4 @@
     <button type="submit" id="subForm">Add Order</button>
 </form>
 
-<h3>Completed Orders</h3>
+

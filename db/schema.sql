@@ -8,4 +8,7 @@ order_item VARCHAR(100),
 completed BOOLEAN
 );
 
+DELETE FROM orders WHERE order_item IS NULL;
+
 SELECT * FROM orders
+

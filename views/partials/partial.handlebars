@@ -1,3 +1,7 @@
-<button class="statusChange" data-id="{{id}}" data-newStatus="{{completed}}">
-    {{#if completed}}Close Order{{/if}}
-</button>
+<li>
+    {{order_item}} 
+
+    <button class="statusChange" data-id="{{id}}" data-newStatus="{{status}}">
+        {{#if completed}}Reopen Order{{else}}Close Order{{/if}}
+    </button>
+</li>

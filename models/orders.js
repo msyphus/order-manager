@@ -10,6 +10,11 @@ var order = {
         orm.addOrder("orders", col, val, function(result) {
             cb(result);
         });
+    },
+    changeStatus: function(objColVals, id, cb) {
+        orm.changeStatus("orders", objColVals, id, function(result) {
+            cb(result);
+        });
     }
 };
 

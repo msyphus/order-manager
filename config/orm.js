@@ -7,7 +7,23 @@ function makePlaceholders(number) {
         holders.push("?");
     }
     return holders.toString();
-}
+};
+
+function objToSql(obj) {
+    var sqlString = [];
+
+    for (var key in obj) {
+        var value = obj[key];
+        if (Object.hasOwnProperty.call(obj, key)) {
+            if (typeof value === "string" && value.indexOf(" ") >= 0) {
+                value = "'" + value + "'";
+            }
+            sqlString.push(key + "=" + value);
+        }
+    }
+    // console.log("sqlString", sqlString);
+    return sqlString.toString();
+};
 
 var orm = {
     listAll: function(table, cb) {
@@ -27,6 +43,20 @@ var orm = {
         queryString += ")";
 
         connection.query(queryString, val, function(err, res) {
+            if (err) throw err;
+            cb(res);
+        });
+    },
+    changeStatus: function(table, objColVals, id, cb) {
+        var queryString = "UPDATE " + table;
+        queryString += " SET ";
+        queryString += objToSql(objColVals);
+        queryString += " WHERE ";
+        queryString += id;
+
+        console.log(queryString);
+
+        connection.query(queryString, function(err, res) {
             if (err) throw err;
             cb(res);
         });

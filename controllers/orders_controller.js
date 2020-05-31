@@ -7,7 +7,6 @@ router.get("/", function(req, res) {
         var hbsObject = {
             orders: data
         };
-        console.log(hbsObject);
         res.render("index", hbsObject);
     });
 });
@@ -20,7 +19,7 @@ router.post("/api/orders", function(req, res) {
 
 router.put("/api/orders/:id", function(req, res) {
     var id = "id = " + req.params.id;
-
+    
         order.changeStatus(
         {
             completed: req.body.completed

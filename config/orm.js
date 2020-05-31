@@ -21,7 +21,6 @@ function objToSql(obj) {
             sqlString.push(key + "=" + value);
         }
     }
-    // console.log("sqlString", sqlString);
     return sqlString.toString();
 };
 
@@ -53,8 +52,6 @@ var orm = {
         queryString += objToSql(objColVals);
         queryString += " WHERE ";
         queryString += id;
-
-        console.log(queryString);
 
         connection.query(queryString, function(err, res) {
             if (err) throw err;

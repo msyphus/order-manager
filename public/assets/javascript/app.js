@@ -1,8 +1,7 @@
 $(function() {
-    console.log("ready");
     $(".statusChange").on("click", function(event) {
         var id = $(this).data("id");
-        var newStatus = $(this).data("newStatus");
+        var newStatus = $(this).data("newstatus");
 
         var updatedStatus = {
             completed: newStatus
@@ -13,8 +12,7 @@ $(function() {
             data: updatedStatus
         }).then(
             function() {
-                console.log("marked order as ", newStatus);
-                // location.reload();
+                location.reload();
             }
         );
     });
@@ -22,20 +20,15 @@ $(function() {
     $("#subForm").on("click", function(event) {
         event.preventDefault();
 
-        console.log("clicked");
-
         var newOrder = {
             order_item: $("#orderItem").val().trim(),
             completed: false
         };
 
-        console.log(newOrder);
-
         $.ajax("/api/orders", {
             type: "POST",
             data: newOrder
         }).then(function() {
-            console.log("added new order");
             location.reload();
         });
     });

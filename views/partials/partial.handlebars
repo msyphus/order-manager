@@ -1,7 +1,7 @@
 <li>
     {{order_item}} 
 
-    <button class="statusChange" data-id="{{id}}" data-newStatus="{{status}}">
-        {{#if completed}}Reopen Order{{else}}Close Order{{/if}}
+    <button class="statusChange" data-id="{{id}}" data-newstatus="{{status}}">
+        {{#if status}}Close Order{{else}}Reopen Order{{/if}}
     </button>
 </li>

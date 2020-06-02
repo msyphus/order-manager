@@ -9,7 +9,7 @@ if (process.env.JAWSDB_URL) {
         host: "localhost",
         port: 3308,
         user: "root",
-        password: "root",
+        password: "fallingJump",
         database: "orders_db"
 });
 };

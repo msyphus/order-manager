@@ -27,3 +27,5 @@ This app was made using the following technologies:
 * MySQL
 * Heroku
 * JawsDB
+
+Created by Mark Syphus, 2020.
